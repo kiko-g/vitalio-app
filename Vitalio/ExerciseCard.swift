@@ -35,7 +35,7 @@ struct ExerciseCard: View {
                 } else {
                     Text("Single")
                         .font(.subheadline)
-                        .foregroundColor(.red)
+                        .foregroundColor(.purple)
                 }
             }
             .padding()
