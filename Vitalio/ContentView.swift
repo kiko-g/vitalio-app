@@ -8,16 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    let exercises = sampleExercises
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            ScrollView {
+                VStack(spacing: 4) {
+                    ForEach(exercises) { exercise in
+                        ExerciseCard(exercise: exercise)
+                            .padding(.horizontal, 16)
+                    }
+                }
+                .padding(.vertical)
+            }
+            .navigationTitle("Exercises")
         }
-        .padding()
     }
 }
+
+
 
 #Preview {
     ContentView()
